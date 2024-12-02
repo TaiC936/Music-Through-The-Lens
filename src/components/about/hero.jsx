@@ -20,7 +20,7 @@ function Hero() {
   };
 
   return (
-    <div className="h-fit w-full flex flex-col gap-8 mb-8 pt-20 ">
+    <div className="h-screen w-full flex flex-col gap-8 mb-8 pt-20 ">
       {" "}
       <motion.div
         initial="hidden"

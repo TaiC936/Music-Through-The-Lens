@@ -5,8 +5,10 @@ import {
   useMotionValueEvent,
   AnimatePresence,
 } from "framer-motion";
-import img1 from "../../assets/imgs/galimg (1).webp";
-import img2 from "../../assets/imgs/galimg (2).webp";
+import img1 from "../../assets/imgs/person (1).webp";
+import img2 from "../../assets/imgs/person (2).webp";
+import img3 from "../../assets/imgs/person (3).webp";
+import img4 from "../../assets/imgs/person (4).webp";
 
 function TeamScroll() {
   const { scrollY } = useScroll();
@@ -31,16 +33,16 @@ function TeamScroll() {
       alt: "picture of Léa",
     },
     {
-      job: "1st Aid",
+      job: "1st AD",
       name: "Ella",
-      image: img1,
+      image: img4,
       text: "Ella's expertise in first aid ensures the safety of our crew and talent on set. Her quick thinking and calm demeanor are invaluable assets during intense shooting schedules.",
       alt: "picture of Ella",
     },
     {
       job: "Producer",
       name: "Luca",
-      image: img2,
+      image: img3,
       text: "Luca's organizational skills and creative vision make him an exceptional producer. He seamlessly coordinates all aspects of production, ensuring that our projects run smoothly from concept to completion.",
       alt: "picture of Luca",
     },
@@ -88,7 +90,7 @@ function TeamScroll() {
   };
 
   return (
-    <div className="md:h-[1700px] h-[1950px] w-full">
+    <div className="md:h-[1700px] h-[1950px] w-full mx-4">
       {/* Loading Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-butterscotch z-50"
@@ -97,12 +99,12 @@ function TeamScroll() {
 
       {/* main content container */}
       <motion.div
-        className="fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-45%] w-full"
+        className="fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-45%] w-full  "
         variants={contentVariants}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
-        <motion.div className="flex flex-col px-4 md:px-0 md:flex-row gap-12 justify-center">
+        <motion.div className="flex flex-col px-4 md:px-0 md:flex-row gap-2 md:gap-8 justify-center ">
           {/* job and name */}
           <div className="flex flex-col">
             <AnimatePresence mode="wait">
@@ -145,12 +147,11 @@ function TeamScroll() {
                 animate="center"
                 exit="exit"
                 transition={{ delay: 0.2, duration: 0.4 }}
-                className="basis-1/4"
               >
                 <img
                   src={teamMembers[currentIndex].image}
                   alt=""
-                  className="w-full h-auto"
+                  className=""
                 />
               </motion.div>
             )}

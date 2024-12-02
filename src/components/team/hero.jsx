@@ -1,11 +1,11 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import img1 from "../../assets/imgs/galimg (8).webp";
+import img1 from "../../assets/imgs/team.webp";
 import { containerVariants } from "../../animations/varients";
 
 export function Hero() {
   const { scrollYProgress } = useScroll();
 
-  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 1.5]);
+  const scale = useTransform(scrollYProgress, [0, 0.1], [0.5, 1]);
   const y = useTransform(scrollYProgress, [0, 0.1], [0, -50]);
 
   return (
@@ -25,7 +25,6 @@ export function Hero() {
           The <motion.span className="text-butterscotch">Team</motion.span>
         </motion.h1>
         <motion.p
-          className="lg:w-2/3 text-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}

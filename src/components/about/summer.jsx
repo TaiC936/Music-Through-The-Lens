@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
-import img1 from "../../assets/imgs/galimg (1).webp";
+import img1 from "../../assets/imgs/person (2).webp";
 
 export function Summer() {
   const containerVariants = {

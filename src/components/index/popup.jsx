@@ -69,8 +69,14 @@ const TimedPopup = () => {
                 Get exclusive Behind The Scenes content and updated screening
                 locations and timings.
               </p>
-              <form onSubmit={NewsletterSubmit} className="flex flex-col gap-2">
+              <form
+                onSubmit={NewsletterSubmit}
+                className="flex flex-col gap-2"
+                id="newsletter-popup-form"
+                autoComplete="off"
+              >
                 <motion.input
+                  autoComplete="off"
                   whileFocus={{ scale: 1.02 }}
                   type="text"
                   name="newsletter-Name"
@@ -81,6 +87,7 @@ const TimedPopup = () => {
                   required
                 />
                 <motion.input
+                  autoComplete="off"
                   whileFocus={{ scale: 1.02 }}
                   type="email"
                   value={email}

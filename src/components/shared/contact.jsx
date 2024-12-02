@@ -44,7 +44,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex  mt-8 justify-center mb-8">
+    <div className="min-h-screen flex  mt-8 justify-center mb-8 lg:mx-32 md:mx-12 mx-4">
       <div className="CONTACT flex flex-col w-full max-w-screen-xl gap-8  rounded-lg">
         <div>
           <h2 className="font-semibold leading-none md:leading-none">
@@ -53,8 +53,13 @@ function Contact() {
           </h2>
         </div>
         <p className="text-butterscotch"></p>
-        <div className="contact-forms flex flex-col md:flex-row justify-between gap-12 md:gap-24">
-          <form className="md:w-1/2 space-y-4" onSubmit={ContactSubmit}>
+        <div className=" flex flex-col md:flex-row justify-between gap-12 md:gap-24">
+          <form
+            className="md:w-1/2 space-y-4"
+            onSubmit={ContactSubmit}
+            id="contact-form"
+            autoComplete="off"
+          >
             <div>
               <input
                 type="text"
@@ -65,6 +70,7 @@ function Contact() {
                 placeholder="Your Name"
                 className="text-white-smoke w-full p-2 bg-transparent border-b focus:outline-none focus:border-butterscotch"
                 required
+                autoComplete="off"
               />
             </div>
             <div>
@@ -77,6 +83,7 @@ function Contact() {
                 placeholder="Your Email"
                 className="text-white-smoke w-full p-2 bg-transparent border-b focus:outline-none focus:border-butterscotch"
                 required
+                autoComplete="off"
               />
             </div>
             <div>
@@ -107,7 +114,12 @@ function Contact() {
               <p className="text-butterscotch">
                 Or sign up for our newsletter!
               </p>
-              <form className="space-y-4" onSubmit={NewsletterSubmit}>
+              <form
+                className="space-y-4"
+                onSubmit={NewsletterSubmit}
+                id="newsletters-form"
+                autoComplete="off"
+              >
                 <div>
                   <input
                     type="text"
@@ -117,6 +129,7 @@ function Contact() {
                     placeholder="Name"
                     className="text-white-smoke w-full p-2 bg-transparent border border-white-smoke focus:outline-none focus:border-butterscotch mb-4"
                     required
+                    autoComplete="off"
                   />
                   <input
                     type="email"
@@ -126,6 +139,7 @@ function Contact() {
                     placeholder="Email"
                     className="text-white-smoke w-full p-2 bg-transparent border border-white-smoke focus:outline-none focus:border-butterscotch"
                     required
+                    autoComplete="off"
                   />
                   <input
                     className="border-white-smoke border w-full px-4 py-2 text-white-smoke hover:bg-purple-900 mt-5"

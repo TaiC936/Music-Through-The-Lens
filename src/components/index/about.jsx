@@ -22,10 +22,7 @@ function About() {
             className="col-span-4 md:col-span-2   mb-4"
             variants={itemVariants}
           >
-            <h2 className="leading-none">
-              <span className="text-butterscotch">
-                Capturing the Beat <br />
-              </span>
+            <h2 className="leading-none text-butterscotch">
               A Lens on Concert Photography
             </h2>
           </motion.div>

@@ -15,7 +15,7 @@ function Extra() {
             <Button text="View BTS" to="/behind-the-scenes" />
           </div>
         </div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col mt-8 ">
           <p className="text-amethyst text-base">London, 2024</p>
           <img src={galImg} alt="artist on stage with light glare" />
 

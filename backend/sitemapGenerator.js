@@ -1,10 +1,9 @@
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
-const mongoose = require("mongoose");
 
 async function generateSitemap(baseUrl) {
   try {
-    const sitemapStream = new SitemapStream({ hostname: baseUrl });
+    const smStream = new SitemapStream({ hostname: baseUrl });
 
     sitemapStream.write({ url: "/", changefreq: "daily", priority: 1 });
     sitemapStream.write({
@@ -40,12 +39,16 @@ async function generateSitemap(baseUrl) {
       priority: 0.8,
     });
 
-    sitemapStream.end();
+    routes.forEach((route) => {
+      smStream.write(route);
+    });
 
-    const sitemap = await streamToPromise(Readable.from(sitemapStream));
+    smStream.end();
+
+    const sitemap = await streamToPromise(Readable.from(smStream));
     return sitemap.toString();
   } catch (error) {
-    console.error("Error generating sitemap:", error);
+    console.error("Error in generateSitemap:", error);
     throw error;
   }
 }

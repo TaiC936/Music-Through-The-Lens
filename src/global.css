@@ -1,0 +1,79 @@
+:root {
+  --font-family: Helvetica, Arial, sans-serif;
+
+  --h1-font-size: 3rem; /* text-xl */
+  --h2-font-size: 1.875rem; /* text-3xl */
+  --h3-font-size: 1.5rem; /* text-2xl */
+  --h4-font-size: 1.25rem; /* text-xl */
+  --h5-font-size: 1.125rem; /* text-lg */
+  --h6-font-size: 1rem; /* text-base */
+  --p-font-size: 0.875rem; /* text-sm */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --h1-font-size: calc(1.25rem + 5vw);
+    --h2-font-size: calc(1.875rem + 2vw);
+    --h3-font-size: calc(1.5rem + 1.5vw);
+    --h4-font-size: calc(1.25rem + 1vw);
+    --h5-font-size: calc(1.125rem + 0.5vw);
+    --h6-font-size: calc(1rem + 0.25vw);
+    --p-font-size: calc(0.675rem + 0.5vw);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font-family);
+}
+
+h1 {
+  @apply font-bold text-white-smoke;
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  @apply font-semibold text-white-smoke;
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  @apply font-medium text-white-smoke;
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  @apply font-medium text-butterscotch;
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  @apply font-medium text-butterscotch;
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  @apply font-medium text-amethyst;
+  font-size: var(--h6-font-size);
+}
+
+p {
+  @apply text-white-smoke leading-relaxed;
+  font-size: var(--p-font-size);
+}
+.shape-outside-circle {
+  shape-outside: circle(50%);
+}
+
+.shape-outside-polygon {
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+
+.text-shaddow {
+  text-shadow: #666666 4px 4px;
+}

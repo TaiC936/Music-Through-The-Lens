@@ -1,6 +1,7 @@
 const express = require("express");
 const helmet = require("helmet");
 const app = express();
+const generateSitemap = require("./sitemapGenerator");
 
 const ContactModel = require("./models/ContactModel");
 const cors = require("cors");
@@ -57,4 +58,17 @@ app.post("/createNLEmail", async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+});
+
+//site map gen
+app.get("/sitemap.xml", async (req, res) => {
+  try {
+    const sitemap = await generateSitemap(
+      "https://music-through-the-lens-y3ek.onrender.com/"
+    );
+    res.header("Content-Type", "application/xml");
+    res.send(sitemap);
+  } catch (error) {
+    res.status(500).send("Error generating sitemap");
+  }
 });

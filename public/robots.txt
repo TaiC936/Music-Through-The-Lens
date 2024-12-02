@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://music-through-the-lens-y3ek.onrender.com/
+/sitemap.xml

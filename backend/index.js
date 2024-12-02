@@ -1,14 +1,12 @@
 const express = require("express");
 const helmet = require("helmet");
 const app = express();
-const generateSitemap = require("./sitemapGenerator");
 
 const ContactModel = require("./models/ContactModel");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const NewsletterModel = require("./models/NewsletterModel");
 require("dotenv").config();
-
 app.use(helmet());
 
 app.use(
@@ -21,11 +19,11 @@ app.use(
 app.use(express.json());
 
 // MongoDB connection
+mongoose;
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.error("DB connection error:", err));
-
 // Connection error handling
 mongoose.connection.on("error", (err) => {
   console.error("DB connection error:", err);
@@ -52,20 +50,6 @@ app.post("/createNLEmail", async (req, res) => {
   } catch (err) {
     console.error("Error creating message:", err);
     res.status(500).json({ error: "Error" });
-  }
-});
-
-// Sitemap gen
-app.get("/sitemap.xml", async (req, res) => {
-  try {
-    const sitemap = await generateSitemap(
-      "https://music-through-the-lens-y3ek.onrender.com"
-    );
-    res.header("Content-Type", "application/xml");
-    res.send(sitemap);
-  } catch (error) {
-    console.error("Error generating sitemap:", error);
-    res.status(500).send("Error generating sitemap");
   }
 });
 

@@ -40,7 +40,7 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com"
+          content="https://https://music-through-the-lens-y3ek.onrender.com/.com"
         />
         <meta property="og:image" content="../assets/imgs/galimg (2).webp" />
 
@@ -54,7 +54,7 @@ const Index = () => {
 
         <link
           rel="canonical"
-          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com"
+          href="https://https://music-through-the-lens-y3ek.onrender.com/.com"
         />
       </Helmet>
       <Nav />

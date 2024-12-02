@@ -29,12 +29,12 @@ const Team = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/team"
+          content="https://https://music-through-the-lens-y3ek.onrender.com/.com/team"
         />
         <meta property="og:image" content="[URL to team photo or logo]" />
         <link
           rel="canonical"
-          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/team"
+          href="https://https://music-through-the-lens-y3ek.onrender.com/.com/team"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -43,7 +43,7 @@ const Team = () => {
             name: "Our Team",
             description:
               "Meet the talented photographers and creatives behind Music Through The Lens",
-            url: "https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/team",
+            url: "https://https://music-through-the-lens-y3ek.onrender.com/.com/team",
             publisher: {
               "@type": "Organization",
               name: "Music Through The Lens",

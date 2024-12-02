@@ -29,11 +29,11 @@ const BTS = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/bts"
+          content="https://https://music-through-the-lens-y3ek.onrender.com/.com/bts"
         />
         <link
           rel="canonical"
-          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/bts"
+          href="https://https://music-through-the-lens-y3ek.onrender.com/.com/bts"
         />
       </Helmet>{" "}
       <Nav />

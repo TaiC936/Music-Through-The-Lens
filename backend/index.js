@@ -14,17 +14,24 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ["'self'"],
+        defaultSrc: ["'self'", "https://mttl.onrender.com"],
         fontSrc: [
           "'self'",
           "https://fonts.gstatic.com",
           "moz-extension:",
           "https:",
           "data:",
+          "https://mttl.onrender.com",
         ],
-        scriptSrc: ["'self'", "'unsafe-inline'"],
-        styleSrc: ["'self'", "'unsafe-inline'", "https:"],
-        imgSrc: ["'self'", "data:", "https:"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "https://mttl.onrender.com"],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https:",
+          "https://mttl.onrender.com",
+        ],
+        imgSrc: ["'self'", "data:", "https:", "https://mttl.onrender.com"],
+        connectSrc: ["'self'", "https://mttl.onrender.com"],
       },
     },
   })
@@ -32,7 +39,7 @@ app.use(
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://mttl.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
@@ -77,11 +84,11 @@ app.post("/createNLEmail", async (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "..", "dist")));
 
 // Handle React routing
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "dist", "index.html"));
 });
 
 // Start the server

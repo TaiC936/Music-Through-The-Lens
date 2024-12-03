@@ -24,14 +24,8 @@ const Contact = () => {
           content="Reach out to our team of professional concert photographers for inquiries, collaborations, or any questions about our services."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com/contact"
-        />
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/contact"
-        />
+        <meta property="og:url" content="https://mttl.onrender.com/contact" />
+        <link rel="canonical" href="https://mttl.onrender.com/contact" />
       </Helmet>{" "}
       <Nav />
       <main className="lg:mx-32 md:mx-12 mx-4 pt-24">

@@ -27,15 +27,8 @@ const Team = () => {
           content="Discover the talented individuals who capture the magic of live music. Meet our team of expert concert photographers and creatives."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com/team"
-        />
-        <meta property="og:image" content="[URL to team photo or logo]" />
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/team"
-        />
+        <meta property="og:url" content="https://mttl.onrender.com/team" />
+        <link rel="canonical" href="https://mttl.onrender.com/team" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -43,13 +36,13 @@ const Team = () => {
             name: "Our Team",
             description:
               "Meet the talented photographers and creatives behind Music Through The Lens",
-            url: "https://https://mttl.onrender.com//.com/team",
+            url: "https://mttl.onrender.com/team",
             publisher: {
               "@type": "Organization",
               name: "Music Through The Lens",
               logo: {
                 "@type": "ImageObject",
-                url: "[URL to your logo]",
+                url: "./assets/logo.webp",
               },
             },
             employee: [

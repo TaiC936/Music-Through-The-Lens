@@ -27,14 +27,8 @@ const BTS = () => {
           content="Discover the unseen world of concert photography. Explore our behind-the-scenes gallery of candid moments and equipment setups."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com/bts"
-        />
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/bts"
-        />
+        <meta property="og:url" content="https://mttl.onrender.com/bts" />
+        <link rel="canonical" href="https://mttl.onrender.com/bts" />
       </Helmet>{" "}
       <Nav />
       <main className="">

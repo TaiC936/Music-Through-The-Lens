@@ -27,16 +27,9 @@ const Gallery = () => {
           content="Immerse yourself in the world of live music through our captivating concert photography gallery."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com/gallery"
-        />
-        <link rel="preload" as="image" href="../assets/imgs/trailerimg.webp" />
+        <meta property="og:url" content="https://mttl.onrender.com/gallery" />
 
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/gallery"
-        />
+        <link rel="canonical" href="https://mttl.onrender.com/gallery" />
       </Helmet>{" "}
       <Nav />
       <main className=" bg-white-smoke ">

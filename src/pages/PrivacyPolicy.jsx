@@ -27,12 +27,9 @@ const PrivacyPolicy = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://https://mttl.onrender.com//.com/privacy-policy"
+          content="https://mttl.onrender.com/privacy-policy"
         />
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/privacy-policy"
-        />
+        <link rel="canonical" href="https://mttl.onrender.com/privacy-policy" />
       </Helmet>
       <Nav />
       <main>

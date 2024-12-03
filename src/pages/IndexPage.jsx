@@ -38,21 +38,10 @@ const Index = () => {
           content="Dive into the captivating world of concert photography. Our documentary showcases the art, passion, and challenges of capturing live music moments."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com"
-        />
+        <meta property="og:url" content="https://mttl.onrender.com/" />
         <meta property="og:image" content="../assets/imgs/galimg (2).webp" />
 
-        <link
-          rel="preload"
-          fetchpriority="high"
-          as="image"
-          href="/src/assets/imgs/trailerimg.webp"
-          type="image/webp"
-        />
-
-        <link rel="canonical" href="https://https://mttl.onrender.com//.com" />
+        <link rel="canonical" href="https://mttl.onrender.com" />
       </Helmet>
       <Nav />
       <main>

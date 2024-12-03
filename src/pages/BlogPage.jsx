@@ -27,14 +27,8 @@ const Blog = () => {
           content="Dive into the world of concert photography with expert tips, insights, and stories from professional music photographers."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com/blog"
-        />
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/blog"
-        />
+        <meta property="og:url" content="https://mttl.onrender.com/blog" />
+        <link rel="canonical" href="https://mttl.onrender.com/blog" />
       </Helmet>{" "}
       <Nav />
       <main className="lg:px-32 md:px-12 px-4 bg-white-smoke ">

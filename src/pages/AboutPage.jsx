@@ -32,14 +32,8 @@ const About = () => {
           content="Discover the story behind our concert photography documentary and meet the team bringing it to life."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://https://mttl.onrender.com//.com/about"
-        />
-        <link
-          rel="canonical"
-          href="https://https://mttl.onrender.com//.com/about"
-        />
+        <meta property="og:url" content="https://mttl.onrender.com/about" />
+        <link rel="canonical" href="https://mttl.onrender.com/about" />
       </Helmet>{" "}
       <Nav />
       <main className="lg:mx-32 md:mx-12 mx-4">

@@ -47,11 +47,11 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://https://mttl.onrender.com//.com/blog/concert-photography-tips"
+          content="https://mttl.onrender.com//.com/blog/concert-photography-tips"
         />
         <link
           rel="canonical"
-          href="https://https://mttl.onrender.com//.com/blog/concert-photography-tips"
+          href="https://mttl.onrender.com/blog/concert-photography-tips"
         />
       </Helmet>
       <main>

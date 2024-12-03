@@ -7,8 +7,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const NewsletterModel = require("./models/NewsletterModel");
 require("dotenv").config();
+
 app.use(helmet());
 
+// configure content security policy and CORS
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -25,20 +27,22 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+// Use express.json middleware to parse JSON requests
 app.use(express.json());
 
 // MongoDB connection
-mongoose;
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.error("DB connection error:", err));
 
-// Connection error handling
+// MongoDB connection error
 mongoose.connection.on("error", (err) => {
   console.error("DB connection error:", err);
 });
 
+// route to create message
 app.post("/createMessage", async (req, res) => {
   try {
     const { name, email, mes } = req.body;
@@ -51,6 +55,7 @@ app.post("/createMessage", async (req, res) => {
   }
 });
 
+// route to create newsletter email
 app.post("/createNLEmail", async (req, res) => {
   try {
     const { name, email } = req.body;
@@ -63,7 +68,7 @@ app.post("/createNLEmail", async (req, res) => {
   }
 });
 
-// Start the server
+// starting server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

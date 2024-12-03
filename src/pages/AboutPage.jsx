@@ -34,11 +34,11 @@ const About = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://https://music-through-the-lens-y3ek.onrender.com/.com/about"
+          content="https://https://mttl.onrender.com//.com/about"
         />
         <link
           rel="canonical"
-          href="https://https://music-through-the-lens-y3ek.onrender.com/.com/about"
+          href="https://https://mttl.onrender.com//.com/about"
         />
       </Helmet>{" "}
       <Nav />

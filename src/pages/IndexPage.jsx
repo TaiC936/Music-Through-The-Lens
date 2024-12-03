@@ -40,7 +40,7 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://https://music-through-the-lens-y3ek.onrender.com/.com"
+          content="https://https://mttl.onrender.com//.com"
         />
         <meta property="og:image" content="../assets/imgs/galimg (2).webp" />
 
@@ -52,10 +52,7 @@ const Index = () => {
           type="image/webp"
         />
 
-        <link
-          rel="canonical"
-          href="https://https://music-through-the-lens-y3ek.onrender.com/.com"
-        />
+        <link rel="canonical" href="https://https://mttl.onrender.com//.com" />
       </Helmet>
       <Nav />
       <main>

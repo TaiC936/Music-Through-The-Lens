@@ -1,13 +1,34 @@
 const express = require("express");
 const helmet = require("helmet");
-const app = express();
-
-const ContactModel = require("./models/ContactModel");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const NewsletterModel = require("./models/NewsletterModel");
+const path = require("path");
 require("dotenv").config();
-app.use(helmet());
+
+const ContactModel = require("./models/ContactModel");
+const NewsletterModel = require("./models/NewsletterModel");
+
+const app = express();
+
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        fontSrc: [
+          "'self'",
+          "https://fonts.gstatic.com",
+          "moz-extension:",
+          "https:",
+          "data:",
+        ],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https:"],
+        imgSrc: ["'self'", "data:", "https:"],
+      },
+    },
+  })
+);
 
 app.use(
   cors({
@@ -16,10 +37,10 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 app.use(express.json());
 
 // MongoDB connection
-mongoose;
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to DB"))
@@ -30,6 +51,7 @@ mongoose.connection.on("error", (err) => {
   console.error("DB connection error:", err);
 });
 
+// routes
 app.post("/createMessage", async (req, res) => {
   try {
     const { name, email, mes } = req.body;
@@ -38,7 +60,7 @@ app.post("/createMessage", async (req, res) => {
     res.json(savedMessage);
   } catch (err) {
     console.error("Error creating message:", err);
-    res.status(500).json({ error: "Error" });
+    res.status(500).json({ error: "Error creating message" });
   }
 });
 
@@ -49,9 +71,17 @@ app.post("/createNLEmail", async (req, res) => {
     const savedEmail = await newEmail.save();
     res.json(savedEmail);
   } catch (err) {
-    console.error("Error creating message:", err);
-    res.status(500).json({ error: "Error" });
+    console.error("Error creating newsletter email:", err);
+    res.status(500).json({ error: "Error creating newsletter email" });
   }
+});
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
+
+// Handle React routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 // Start the server

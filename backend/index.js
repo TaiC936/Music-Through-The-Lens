@@ -10,6 +10,15 @@ require("dotenv").config();
 app.use(helmet());
 
 app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com", "moz-extension:"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      imgSrc: ["'self'", "data:", "https:"],
+    },
+  }),
   cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -24,6 +33,7 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.error("DB connection error:", err));
+
 // Connection error handling
 mongoose.connection.on("error", (err) => {
   console.error("DB connection error:", err);
